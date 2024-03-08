@@ -1,7 +1,3 @@
-"""
-Template DataManager
-"""
-
 from dataclasses import dataclass, field
 from typing import Dict, Literal, Tuple, Type, Union
 
@@ -15,27 +11,19 @@ from nerfstudio.data.datamanagers.base_datamanager import (
 
 
 @dataclass
-class TemplateDataManagerConfig(VanillaDataManagerConfig):
-    """Template DataManager Config
+class CoDiDataManagerConfig(VanillaDataManagerConfig):
 
-    Add your custom datamanager config parameters here.
-    """
-
-    _target: Type = field(default_factory=lambda: TemplateDataManager)
+    _target: Type = field(default_factory=lambda: CoDiDataManager)
 
 
-class TemplateDataManager(VanillaDataManager):
-    """Template DataManager
 
-    Args:
-        config: the DataManagerConfig used to instantiate class
-    """
+class CoDiDataManager(VanillaDataManager):
 
-    config: TemplateDataManagerConfig
+    config: CoDiDataManagerConfig
 
     def __init__(
         self,
-        config: TemplateDataManagerConfig,
+        config: CoDiDataManagerConfig,
         device: Union[torch.device, str] = "cpu",
         test_mode: Literal["test", "val", "inference"] = "val",
         world_size: int = 1,
