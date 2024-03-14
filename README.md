@@ -12,7 +12,7 @@ pip install -e .
 ns-install-cli
 ```
 
-## Training the CoDiNeRF
+## Training the CoDi-NeRF
 To train the CoDi-NeRF, run the command:
 ```
 ns-train codinerf --data [PATH]
