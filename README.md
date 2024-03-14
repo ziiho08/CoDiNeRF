@@ -1,4 +1,4 @@
-# CoDiNeRF
+# CoDi-NeRF
 
 
 ## Installation
@@ -13,7 +13,7 @@ ns-install-cli
 ```
 
 ## Training the CoDiNeRF
-To train the CoDiNeRF, run the command:
+To train the CoDi-NeRF, run the command:
 ```
 ns-train codinerf --data [PATH]
 ```
